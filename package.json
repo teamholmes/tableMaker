@@ -1,0 +1,34 @@
+{
+  "name": "tablemaker",
+  "version": "1.0.0",
+  "description": "Generate tables form JSON Data",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamholmes/tableMaker.git"
+  },
+  "keywords": [
+    "table",
+    "maker",
+    "json",
+    "data",
+    "node"
+  ],
+  "author": "russell holmes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamholmes/tableMaker/issues"
+  },
+  "homepage": "https://github.com/teamholmes/tableMaker#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "mocha": "^2.2.5"
+  }
+}
