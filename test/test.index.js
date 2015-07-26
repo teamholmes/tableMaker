@@ -16,9 +16,9 @@ describe('Karma Test', function() {
 
 describe('Karma Test', function() {
   describe('Will pass initial test', function () {
-   it('converts & into &amp;', function() {
+   it('Zconverts & into &amp;', function() {
     assert.equal(module.addX(5), 10);
-    assert.equal(module.subreact(10,2), 8);
+    assert.equal(module.subtract(10,2), 8);
   });
   });
 });

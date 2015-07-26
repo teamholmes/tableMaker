@@ -1,4 +1,7 @@
 /// https://quickleft.com/blog/creating-and-publishing-a-node-js-module/
+
+var tableModule = require('./table');
+
 var x = 5;
 var addX = function(value) {
   return value + x;
@@ -12,21 +15,6 @@ var subtract = function(value, v1) {
 module.exports.addX = addX;
 module.exports.subtract = subtract;
 
-//console.log(addX(5));
-/*
-module.exports = {
+var myTable = new tableModule('myspecialTable');
+console.log(myTable.getTableId());
 
-  var t = function shabba(html) {
-    var greeting = 'Hello ' + html;
-    return greeting;
-  }
-}
-
-
-module.exports = {
-  doNothing: function shabba(html) {
-    var greeting = 'Hello ' + html;
-    return greeting;
-  }
-};
-*/
