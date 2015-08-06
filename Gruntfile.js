@@ -3,37 +3,22 @@ module.exports = function(grunt){
   grunt.initConfig({
 
     // specifying the settings for jsHint
-   jsHint: {
-            all: {
-                src: '**.js',
-                options: {
-                    bitwise: true,
-                    camelcase: true,
-                    curly: true,
-                    eqeqeq: true,
-                    forin: true,
-                    immed: true,
-                    indent: 4,
-                    latedef: true,
-                    newcap: true,
-                    noarg: true,
-                    noempty: true,
-                    nonew: true,
-                    quotmark: 'single',
-                    regexp: true,
-                    undef: true,
-                    unused: true,
-                    trailing: true,
-                    maxlen: 120
-                }
-            }
+   jshint: {
+      // You get to make the names
+      // The paths tell JSHint which files to validate      
+      myFiles: [
+                '*.js', 
+                'dir2/**/*.js']
     },
 
-    //specifying the settings for watch
+    //specifying the settings for watch 
     watch: {
       scripts: {
-        files: ['*.js'],
-        tasks: ['jsHint'],
+        files: [
+                '!Gruntfile.js',
+                'index.js'
+                ],
+        tasks: ['jshint:myFiles'],
         options: {
 
           spawn:false,
@@ -46,7 +31,9 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
+
   // Registering css minification as a default task
   grunt.registerTask( 'default', [  ] );
+  grunt.registerTask( 'check', [ 'jsHint' ] );
  
 }
