@@ -146,8 +146,8 @@ var pager = function() {
         moreContentPlaceholder = '...';
 
     var api = {};
-
-    var shouldAddPrevNextLinks = function() {
+    
+    var shouldAddPrevNextLinks = function(potatoes) {
         return includeNextPrevious;
     };
 
